@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>swiper js</title>
+  </head>
+  <body>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img
+            class="img-fluid"
+            src="https://i.pinimg.com/736x/55/09/84/5509846aef9b16e7f3bd8f0adc81c3ce--twitter-cover-twitter-headers.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="img-fluid"
+            src="https://cdn.wallpapersafari.com/2/29/fdr5Z7.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="img-fluid"
+            src="https://cdn.wallpapersafari.com/56/97/emE1Vj.jpg"
+            alt=""
+          />
+        </div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev switcher"></div>
+      <div class="swiper-button-next switcher"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <!-- lightbox !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+    <div class="row mt-5">
+      <div class="column">
+        <img
+          src="alt.jpg"
+          onclick="openModal();currentSlide(1)"
+          class="hover-shadow img-fluid"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="alt.jpg"
+          onclick="openModal();currentSlide(2)"
+          class="hover-shadow img-fluid"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="alt.jpg"
+          onclick="openModal();currentSlide(3)"
+          class="hover-shadow img-fluid"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="alt.jpg"
+          onclick="openModal();currentSlide(4)"
+          class="hover-shadow img-fluid"
+        />
+      </div>
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="alt.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="alt.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="alt.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="alt.jpg" style="width: 100%" />
+        </div>
+
+        <!-- Next/previous controls -->
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="column">
+          <img
+            class="demo"
+            src="alt.jpg"
+            onclick="currentSlide(1)"
+            alt="Nature"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="alt.jpg"
+            onclick="currentSlide(2)"
+            alt="Snow"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="alt.jpg"
+            onclick="currentSlide(3)"
+            alt="Mountains"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="alt.jpg"
+            onclick="currentSlide(4)"
+            alt="Lights"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
